@@ -561,6 +561,14 @@
         "Tags": []
     },
     {
+        "Link": "https://www.youtube.com/live/Sv9hcJ3k5h4",
+        "Description": "Mt.Fuji",
+        "Location": "Kawaguchiko",
+        "Tags": [
+            "mt.fuji"
+        ]
+    },
+    {
         "Link": "https://www.youtube.com/live/kYK9J6KNz0M",
         "Description": "Live camera of Mt.Fuji 富士山ライブカメラ/河口湖駅前",
         "Location": "Kawaguchiko",
@@ -577,6 +585,12 @@
         ]
     },
     {
+        "Link": "https://www.youtube.com/live/YEg-gA-OvtM",
+        "Description": "Kawaguchiko Station",
+        "Location": "Kawaguchiko",
+        "Tags": []
+    },
+    {
         "Link": "https://www.youtube.com/live/bdUbACCWmoY",
         "Description": "Lake Kawaguchiko 河口湖",
         "Location": "Kawaguchiko",
@@ -591,12 +605,6 @@
     {
         "Link": "https://www.youtube.com/live/AU_2zfM4m68",
         "Description": "Kobe Waterfront 神戸ウォーターフロント",
-        "Location": "Kobe",
-        "Tags": []
-    },
-    {
-        "Link": "https://www.youtube.com/live/OxjRbDB2A5Y",
-        "Description": "Rokko Mountains, Kobe 六甲山ライブ",
         "Location": "Kobe",
         "Tags": []
     },
