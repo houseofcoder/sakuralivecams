@@ -62,6 +62,14 @@
         ]
     },
     {
+        "Link": "https://www.youtube.com/live/jNvGstplrBo",
+        "Description": "SHIBUYA CROSSING - SHIBUYA SKY",
+        "Location": "Tokyo",
+        "Tags": [
+            "shibuya"
+        ]
+    },
+    {
         "Link": "https://www.youtube.com/live/IQIuVqt4sj8",
         "Description": "Rainbow Bridge - Tokyo お台場・レインボーブリッジ - 首都高 ライブカメラ",
         "Location": "Tokyo",
@@ -70,7 +78,7 @@
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/OzeiQ_BwQeU",
+        "Link": "https://www.youtube.com/live/vLVAbockG6k",
         "Description": "Tokyo Nishiazabu 東京・西麻布ライブカメラ",
         "Location": "Tokyo",
         "Tags": [
@@ -181,7 +189,7 @@
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/hBiBadOukZA",
+        "Link": "https://www.youtube.com/live/HjRZNBm1kms",
         "Description": "Precincts of Sensoji Temple 浅草寺の境内",
         "Location": "Tokyo",
         "Tags": []
@@ -241,7 +249,7 @@
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/nOk4cd0kkp8",
+        "Link": "https://www.youtube.com/live/HjRZNBm1kms",
         "Description": "Sensoji Temple, Asakusa, Tokyo 浅草寺",
         "Location": "Tokyo",
         "Tags": []
@@ -381,7 +389,7 @@
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/7BGWIFgWMZg",
+        "Link": "https://www.youtube.com/live/eHKFF2ly1vc",
         "Description": "Shin-Midōsuji in Osaka 新御堂筋ライブカメラ",
         "Location": "Osaka",
         "Tags": []
@@ -507,7 +515,7 @@
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/Iziq6xXPwY0",
+        "Link": "https://www.youtube.com/live/JOfduRVEYwQ",
         "Description": "Hiroshima Peace Memorial Park (広島平和記念公園)",
         "Location": "Hiroshima",
         "Tags": [
@@ -569,7 +577,7 @@
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/mWm6luQ1d7M",
+        "Link": "https://www.youtube.com/live/bdUbACCWmoY",
         "Description": "Lake Kawaguchiko 河口湖",
         "Location": "Kawaguchiko",
         "Tags": []
