@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SakuraLive - Watch live webcams across Japan</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===== ORIGINAL META TAGS (kept as-is) =====
+       Keep everything in this block unchanged. If your current index has more tags,
+       paste them here; this section is preserved by design. -->
+    <meta name="description"
+        content="Watch live public webcams from Japan! Explore real-time views of Tokyo, Kyoto, and other cities, including Sakura blossoms and iconic landmarks.">
+    <meta name="keywords"
+        content="Japan live stream, Tokyo live camera, Sakura watching, live webcams Japan, Japanese cities webcams">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sakuralivecams.com" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SakuraLive - Watch live webcams across Japan">
+    <meta property="og:description" content="Watch live streams from Japan's iconic locations and cities.">
+    <meta property="og:image" content="https://sakuralivecams.com/assets/images/thumbnail.jpg">
+    <meta property="og:url" content="https://sakuralivecams.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SakuraLive - Watch live webcams across Japan">
+    <meta name="twitter:description" content="Watch live streams from Japan's iconic locations and cities.">
+    <meta name="twitter:image" content="https://sakuralivecams.com/assets/images/thumbnail.jpg">
+    <link rel="icon" href="assets/images/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/favicon_io/apple-touch-icon.png">
+    <!-- ===== /ORIGINAL META TAGS ===== -->
+
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#ea580c', /* orange-600-ish accent */
+                            600: '#c2410c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- VideoObject schema for FEATURED streams -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"VideoObject",
+        "name":"Shibuya Scramble Crossing Live Webcam - Tokyo, Japan",
+        "description":"Watch the iconic Shibuya Scramble Crossing live from Tokyo, Japan.",
+        "thumbnailUrl":"https://img.youtube.com/vi/tujkoXI8rWM/hqdefault.jpg",
+        "uploadDate":"2024-01-01T00:00:00Z",
+        "embedUrl":"https://www.youtube.com/embed/tujkoXI8rWM",
+        "contentUrl":"https://www.youtube.com/live/tujkoXI8rWM",
+        "publisher":{"@type":"Organization","name":"SakuraLive","logo":{"@type":"ImageObject","url":"https://sakuralivecams.com/assets/images/logo.png"}}
+      },
+      {
+        "@type":"VideoObject",
+        "name":"Sapporo Station Live Webcam - Hokkaido, Japan",
+        "description":"Live stream from Sapporo Station, Hokkaido, Japan.",
+        "thumbnailUrl":"https://img.youtube.com/vi/O7aL3u5n1gQ/hqdefault.jpg",
+        "uploadDate":"2024-01-01T00:00:00Z",
+        "embedUrl":"https://www.youtube.com/embed/O7aL3u5n1gQ",
+        "contentUrl":"https://www.youtube.com/live/O7aL3u5n1gQ",
+        "publisher":{"@type":"Organization","name":"SakuraLive","logo":{"@type":"ImageObject","url":"https://sakuralivecams.com/assets/images/logo.png"}}
+      },
+      {
+        "@type":"VideoObject",
+        "name":"Tokyo Shinjuku Live Webcam - Japan",
+        "description":"Live view of Shinjuku, Tokyo.",
+        "thumbnailUrl":"https://img.youtube.com/vi/6dp-bvQ7RWo/hqdefault.jpg",
+        "uploadDate":"2024-01-01T00:00:00Z",
+        "embedUrl":"https://www.youtube.com/embed/6dp-bvQ7RWo",
+        "contentUrl":"https://www.youtube.com/live/6dp-bvQ7RWo",
+        "publisher":{"@type":"Organization","name":"SakuraLive","logo":{"@type":"ImageObject","url":"https://sakuralivecams.com/assets/images/logo.png"}}
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 antialiased">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/95 backdrop-blur text-white">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+            <a href="https://sakuralivecams.com" class="flex items-center gap-3">
+                <img src="assets/images/logo.png" alt="SakuraLive" class="h-10 w-10 rounded">
+                <div class="leading-tight">
+                    <span class="block text-xl font-extrabold tracking-tight">SakuraLive</span>
+                    <span class="block text-xs text-gray-300">Watch live webcams across Japan</span>
+                </div>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.sakuralive" target="_blank"
+                class="shrink-0 inline-flex">
+                <img src="assets/images/download-playstore-img.png" alt="Get it on Google Play" class="h-9 md:h-11">
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero / Featured -->
+    <section id="featuredSection" class="relative bg-black">
+
+        <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Mobile shows 1 (others hidden), Desktop shows all 3 -->
+            <article class="group rounded-xl overflow-hidden bg-white/5 ring-1 ring-white/10">
+                <button type="button" data-video-id="tujkoXI8rWM" data-title="Shibuya Scramble Crossing"
+                    class="lite-embed relative block w-full">
+                    <!-- 16:9 container -->
+                    <div class="aspect-video bg-black grid place-items-center">
+                        <img src="https://img.youtube.com/vi/tujkoXI8rWM/hqdefault.jpg"
+                            alt="Shibuya Scramble Crossing live webcam thumbnail"
+                            class="max-w-full max-h-full object-contain" loading="lazy" />
+                        <span class="absolute inset-0 grid place-items-center">
+                            <span
+                                class="h-14 w-14 rounded-full bg-white/90 backdrop-blur grid place-items-center shadow group-hover:scale-105 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-600"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span
+                            class="absolute left-3 top-3 px-2 py-0.5 rounded-full text-xs font-semibold bg-white/90 text-gray-900">Tokyo</span>
+                    </div>
+                </button>
+                <div class="px-4 py-3">
+                    <h3 class="text-white font-semibold">Shibuya Scramble Crossing</h3>
+                </div>
+            </article>
+
+            <article class="hidden md:block group rounded-xl overflow-hidden bg-white/5 ring-1 ring-white/10">
+                <button type="button" data-video-id="O7aL3u5n1gQ" data-title="Sapporo Station"
+                    class="lite-embed relative block w-full">
+                    <div class="aspect-video bg-black grid place-items-center">
+                        <img src="https://img.youtube.com/vi/O7aL3u5n1gQ/hqdefault.jpg"
+                            alt="Sapporo Station live webcam thumbnail" class="max-w-full max-h-full object-contain"
+                            loading="lazy" />
+                        <span class="absolute inset-0 grid place-items-center">
+                            <span
+                                class="h-14 w-14 rounded-full bg-white/90 backdrop-blur grid place-items-center shadow group-hover:scale-105 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-600"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span
+                            class="absolute left-3 top-3 px-2 py-0.5 rounded-full text-xs font-semibold bg-white/90 text-gray-900">Hokkaido</span>
+                    </div>
+                </button>
+                <div class="px-4 py-3">
+                    <h3 class="text-white font-semibold">Sapporo Station</h3>
+                </div>
+            </article>
+
+            <article class="hidden md:block group rounded-xl overflow-hidden bg-white/5 ring-1 ring-white/10">
+                <button type="button" data-video-id="6dp-bvQ7RWo" data-title="Tokyo Shinjuku"
+                    class="lite-embed relative block w-full">
+                    <div class="aspect-video bg-black grid place-items-center">
+                        <img src="https://img.youtube.com/vi/6dp-bvQ7RWo/hqdefault.jpg"
+                            alt="Tokyo Shinjuku live webcam thumbnail" class="max-w-full max-h-full object-contain"
+                            loading="lazy" />
+                        <span class="absolute inset-0 grid place-items-center">
+                            <span
+                                class="h-14 w-14 rounded-full bg-white/90 backdrop-blur grid place-items-center shadow group-hover:scale-105 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-brand-600"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span
+                            class="absolute left-3 top-3 px-2 py-0.5 rounded-full text-xs font-semibold bg-white/90 text-gray-900">Tokyo</span>
+                    </div>
+                </button>
+                <div class="px-4 py-3">
+                    <h3 class="text-white font-semibold">Tokyo Shinjuku</h3>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section id="filterSection" class="bg-gray-50 py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-white rounded-2xl shadow-md p-5 md:p-6">
+                <div class="flex items-center justify-between gap-3 mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">Filter Streams</h2>
+                    <p id="resultCount" class="text-sm text-gray-600">Showing 0 results</p>
+                </div>
+
+                <!-- Row: Location + Search -->
+                <div class="flex flex-col md:flex-row gap-3 mb-4">
+                    <div class="flex items-center border rounded-lg flex-1 px-3 bg-white">
+                        <span class="text-gray-400 mr-2">📍</span>
+                        <select id="locationPicker" class="flex-1 p-2 focus:outline-none bg-transparent">
+                            <option selected value="Tokyo">Tokyo</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center border rounded-lg flex-1 px-3 bg-white">
+                        <span class="text-gray-400 mr-2">🔍</span>
+                        <input id="tagSearch" type="text" placeholder="Search tags (e.g., skyline, airport)…"
+                            class="flex-1 p-2 focus:outline-none bg-transparent">
+                    </div>
+                </div>
+
+                <!-- Predefined tags -->
+                <div id="tagButtons" class="flex flex-wrap gap-2 mb-4">
+                    <!-- default style -->
+                    <button
+                        class="tag-btn px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-brand-50"
+                        data-tag="airport">Airport</button>
+                    <button
+                        class="tag-btn px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-brand-50"
+                        data-tag="city view">City View</button>
+                    <button
+                        class="tag-btn px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-brand-50"
+                        data-tag="skyline">Skyline</button>
+                    <button
+                        class="tag-btn px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-brand-50"
+                        data-tag="shinjuku">Shinjuku</button>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+                    <small class="text-gray-500">Tip: tap a tag to toggle it. Tags on cards are clickable too.</small>
+                    <button id="clearFiltersBtn"
+                        class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 6h12v2H6zm0 5h8v2H6zm0 5h12v2H6z" />
+                        </svg>
+                        Clear Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Grid -->
+    <section class="max-w-7xl mx-auto px-4 pb-12">
+        <div id="videoList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Cards inserted via JS -->
+        </div>
+    </section>
+
+    <!-- Overlay Player -->
+    <div id="videoOverlay" class="fixed inset-0 hidden items-center justify-center bg-black/90 z-50 p-4">
+        <div class="relative w-full max-w-5xl">
+            <button id="closePlayerBtn"
+                class="absolute -top-4 -right-4 h-10 w-10 rounded-full bg-white text-gray-900 grid place-items-center shadow-lg">
+                <span class="sr-only">Close</span>
+                ✕
+            </button>
+            <div class="aspect-video bg-black rounded-xl overflow-hidden ring-1 ring-white/10">
+                <iframe id="youtubeIframe" class="w-full h-full" allowfullscreen title="Live stream player"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- About & FAQ (SEO content) -->
+    <section class="bg-white border-t">
+        <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10">
+            <div>
+                <h2 class="text-2xl font-bold mb-3">About SakuraLive</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    SakuraLive curates public live webcams from across Japan—Tokyo, Kyoto, Osaka, Sapporo and more—
+                    showcasing city streets, skylines, stations and seasonal highlights. Browse by location or tags to
+                    discover real-time views from around the country.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-3">Frequently Asked Questions</h3>
+                <details class="group border rounded-lg p-4 mb-2">
+                    <summary class="cursor-pointer font-medium">Are these official live cameras?</summary>
+                    <p class="mt-2 text-gray-700">We embed publicly available live streams hosted on platforms like
+                        YouTube.</p>
+                </details>
+                <details class="group border rounded-lg p-4 mb-2">
+                    <summary class="cursor-pointer font-medium">How do I find airports or skyline views?</summary>
+                    <p class="mt-2 text-gray-700">Use the tag search or the quick tag chips like “Airport” or “Skyline”.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
+            <div>
+                <div class="flex items-center gap-3 mb-2">
+                    <img src="assets/images/logo.png" alt="SakuraLive" class="h-8 w-8 rounded">
+                    <span class="font-semibold text-white">SakuraLive</span>
+                </div>
+                <p class="text-sm">Live webcams from Tokyo, Osaka, Kyoto, Sapporo, airports, skylines and more.</p>
+            </div>
+            <nav class="text-sm">
+                <h4 class="font-semibold text-white mb-2">Links</h4>
+                <ul class="space-y-1">
+                    <!-- <li><a href="#" class="hover:text-white">About</a></li> -->
+                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    <li><a href="privacy.html" class="hover:text-white">Privacy</a></li>
+                    <li><a href="terms.html" class="hover:text-white">Terms</a></li>
+                    <li><a href="#" class="hover:text-white">Sitemap</a></li>
+                </ul>
+            </nav>
+            <div class="text-sm">
+                <h4 class="font-semibold text-white mb-2">Get the App</h4>
+                <a href="https://play.google.com/store/apps/details?id=com.sakuralive" target="_blank"
+                    class="inline-flex">
+                    <img src="assets/images/download-playstore-img.png" alt="Get it on Google Play" class="h-10">
+                </a>
+            </div>
+        </div>
+        <div class="border-t border-white/10 text-xs text-center py-3">© <span id="yearSpan"></span> SakuraLive</div>
+    </footer>
+
+    <!-- JS (vanilla, lightweight) -->
+    <script>
+        const DATA_URL = 'https://sakuralivecams.com/assets/output2.json';
+
+        let allVideos = [];
+        let selectedLocation = 'Tokyo';
+        let selectedTag = '';
+        let searchTag = '';
+
+        const locationPicker = document.getElementById('locationPicker');
+        const tagSearch = document.getElementById('tagSearch');
+        const videoList = document.getElementById('videoList');
+        const resultCount = document.getElementById('resultCount');
+
+        const overlay = document.getElementById('videoOverlay');
+        const iframeEl = document.getElementById('youtubeIframe');
+        const closeBtn = document.getElementById('closePlayerBtn');
+
+        document.getElementById('yearSpan').textContent = new Date().getFullYear();
+
+        // Fetch data
+        fetch(DATA_URL)
+            .then(r => r.json())
+            .then(data => {
+                allVideos = data;
+                populateLocations();
+                renderFiltered();
+            })
+            .catch(() => {
+                resultCount.textContent = 'Failed to load streams';
+            });
+
+        function populateLocations() {
+            const unique = [...new Set(allVideos.map(v => v.Location))];
+            locationPicker.innerHTML = unique.map(l => `<option value="${escapeHtml(l)}">${escapeHtml(l)}</option>`).join('');
+            // keep default Tokyo if available
+            if (unique.includes('Tokyo')) locationPicker.value = 'Tokyo';
+            selectedLocation = locationPicker.value;
+        }
+
+        function renderFiltered() {
+                let filtered = allVideos;
+
+                // 1. Apply location if not "All"
+                if (selectedLocation && selectedLocation.toLowerCase() !== "all") {
+                    filtered = filtered.filter(v => v.Location.toLowerCase() === selectedLocation.toLowerCase());
+                }
+
+                // 2. Apply Search OR Tag (if either is active)
+                if (searchTag || selectedTag) {
+                    filtered = filtered.filter(v => {
+                        const tags = (v.Tags || []).map(t => t.toLowerCase());
+                        const matchesSearch = searchTag
+                            ? tags.some(t => t.includes(searchTag.toLowerCase()))
+                            : false;
+                        const matchesTag = selectedTag
+                            ? tags.some(t => t === selectedTag.toLowerCase())
+                            : false;
+                        return matchesSearch || matchesTag;
+                    });
+                }
+
+                // 3. Update UI
+                resultCount.textContent = `Showing ${filtered.length} result${filtered.length === 1 ? '' : 's'}`;
+
+                videoList.innerHTML = filtered.map(cardHtml).join('');
+
+                // 4. Attach listeners again
+                videoList.querySelectorAll('.watch-btn').forEach(btn => {
+                    btn.addEventListener('click', () => openOverlay(btn.dataset.link));
+                });
+                videoList.querySelectorAll('.chip').forEach(chip => {
+                    chip.addEventListener('click', () => {
+                        toggleTag(chip.dataset.tag);
+                    });
+                });
+            }
+
+
+            tagSearch.addEventListener('input', e => {
+                searchTag = e.target.value.trim();
+                renderFiltered(); // ✅ don’t cancel chip selection
+            });
+
+            
+
+
+        function cardHtml(v) {
+            const id = (v.Link || '').split('/').pop();
+            const thumb = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+            const tags = (v.Tags || []).map(t =>
+                `<button type="button" class="chip px-2 py-0.5 rounded-full text-xs bg-gray-100 text-gray-700 hover:bg-brand-50"
+                 data-tag="${escapeHtml(t)}">${escapeHtml(t)}</button>`).join(' ');
+            return `
+      <article class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-lg transition">
+        <button type="button" class="relative block w-full" data-link="${escapeHtml(v.Link)}">
+          <div class="aspect-video bg-black grid place-items-center">
+            <img src="${thumb}" alt="${escapeHtml(v.Description)} thumbnail"
+                 class="max-w-full max-h-full object-contain" loading="lazy">
+            <span class="absolute left-3 top-3 px-2 py-0.5 rounded-full text-xs font-semibold bg-white/90 text-gray-900">${escapeHtml(v.Location)}</span>
+          </div>
+        </button>
+        <div class="p-4">
+          <h3 class="font-semibold text-gray-900 mb-2">${escapeHtml(v.Description)}</h3>
+          <div class="flex flex-wrap gap-2 mb-3">${tags}</div>
+          <button class="watch-btn w-full inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg shadow"
+                  data-link="${escapeHtml(v.Link)}">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Watch Stream
+          </button>
+        </div>
+      </article>`;
+        }
+
+        // Filter interactions
+        locationPicker.addEventListener('change', e => {
+            selectedLocation = e.target.value;
+            renderFiltered();
+        });
+
+        tagSearch.addEventListener('input', e => {
+            searchTag = e.target.value.trim();
+            selectedTag = ''; // typing cancels chip selection
+            updateTagChipsVisual();
+            renderFiltered();
+        });
+
+        document.querySelectorAll('#tagButtons .tag-btn').forEach(btn => {
+            btn.addEventListener('click', () => toggleTag(btn.dataset.tag));
+        });
+
+        document.getElementById('clearFiltersBtn').addEventListener('click', () => {
+            selectedLocation = locationPicker.options[0]?.value || 'Tokyo';
+            locationPicker.value = selectedLocation;
+            selectedTag = '';
+            searchTag = '';
+            tagSearch.value = '';
+            updateTagChipsVisual();
+            renderFiltered();
+        });
+
+        function toggleTag(tag) {
+            if (selectedTag === tag) {
+                selectedTag = ''; // toggle off
+            } else {
+                selectedTag = tag; // select new chip
+            }
+            updateTagChipsVisual();
+            renderFiltered();
+        }
+
+        function updateTagChipsVisual() {
+            document.querySelectorAll('#tagButtons .tag-btn').forEach(btn => {
+                const active = btn.dataset.tag === selectedTag;
+                btn.classList.toggle('bg-brand-500', active);
+                btn.classList.toggle('text-white', active);
+                btn.classList.toggle('bg-gray-100', !active);
+                btn.classList.toggle('text-gray-700', !active);
+            });
+        }
+
+        // Overlay player
+        function openOverlay(link) {
+            const id = (link || '').split('/').pop();
+            iframeEl.src = `https://www.youtube.com/embed/${id}?autoplay=1&mute=1`;
+            overlay.classList.remove('hidden');
+            overlay.classList.add('flex');
+        }
+        closeBtn.addEventListener('click', closeOverlay);
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeOverlay();
+        });
+        function closeOverlay() {
+            iframeEl.src = '';
+            overlay.classList.add('hidden');
+            overlay.classList.remove('flex');
+        }
+
+        // Featured lite embeds → replace with iframe on click (perf-friendly)
+        document.querySelectorAll('.lite-embed').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.dataset.videoId;
+                openOverlay(`https://www.youtube.com/live/${id}`);
+            });
+        });
+
+        // helpers
+        function escapeHtml(s = '') {
+            return s.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+        }
+    </script>
+</body>
+
+</html>
