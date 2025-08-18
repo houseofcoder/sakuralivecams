@@ -20,7 +20,7 @@
         "Description": "Tokyo Shinjuku JR Live Cam 東京 新宿 鉄道 ライブカメラ OmoideYokocho 2024",
         "Location": "Tokyo",
         "Tags": [
-            "shinjuku"
+            "shinjuku","railway"
         ]
     },
     {
@@ -28,7 +28,7 @@
         "Description": "Kabukicho Live 東京 新宿 歌舞伎町 ライブ",
         "Location": "Tokyo",
         "Tags": [
-            "shinjuku"
+            "shinjuku","street","kabukicho"
         ]
     },
     {
@@ -43,7 +43,7 @@
         "Link": "https://www.youtube.com/live/Tz8NEpxF6zY",
         "Description": "Tokyo Tower & Railway Livecam【東京タワー&鉄道ライブカメラ】東京 夜景 お天気カメラ 港区 六本木 ",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["railway","tokyo tower"]
     },
     {
         "Link": "https://www.youtube.com/live/Dbvqk7d3G2s",
@@ -158,13 +158,13 @@
         "Link": "https://www.youtube.com/live/PSEbeTZIdSM",
         "Description": "Kachidoki sunset view Tokyo東京 ライブカメラ",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["sky","sunset","kachidoki"]
     },
     {
         "Link": "https://www.youtube.com/live/ShBRqqkzZFU",
         "Description": "Kiba Park, Tokyo",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["park","kiba"]
     },
     {
         "Link": "https://www.youtube.com/live/A0FCKcTuRHo",
@@ -186,19 +186,19 @@
         "Link": "https://www.youtube.com/live/KMj1AFhpeVs",
         "Description": "Tokyo Sky - Live Streaming from Tokyo.",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["skyline","sky","tokyo"]
     },
     {
         "Link": "https://www.youtube.com/live/HjRZNBm1kms",
         "Description": "Precincts of Sensoji Temple 浅草寺の境内",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["temple","sensoji"]
     },
     {
         "Link": "https://www.youtube.com/live/qMDxy_qbdtE",
         "Description": "Tokyo Bay, Sea and Sky",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["bay","sea","sky"]
     },
     {
         "Link": "https://www.youtube.com/live/nCDXIlAKDwU",
@@ -210,37 +210,37 @@
         "Link": "https://www.youtube.com/live/n3B8fp-Henc",
         "Description": "Tokyo Odaiba Live Camera",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["river","waterfront","odaiba"]
     },
     {
         "Link": "https://www.youtube.com/live/kmo17mb5LvI",
         "Description": "Shiodome Railway Tracks, Tokyo",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["railway","shiodome"]
     },
     {
         "Link": "https://www.youtube.com/live/AADZvNj8db4",
         "Description": "Tokyo Metropolitan Expressway Yoga Tollgate",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["expressway","road"]
     },
     {
         "Link": "https://www.youtube.com/live/3o9aoRyrvAk",
         "Description": "Umineko store, ウミネコ商店",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["store","umineko"]
     },
     {
         "Link": "https://www.youtube.com/live/8e761gp0jgY",
         "Description": "Ebisu,Shibuya City, Tokyo 恵比寿駅前のライブカメラ",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["city view","shibuya","ebisu","road"]
     },
     {
-        "Link": "https://www.youtube.com/live/2LsyIx6EHEE",
+        "Link": "https://www.youtube.com/live/3KZ20aH_Oq4",
         "Description": "Arakawa River in Tokyo",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["river","arakawa"]
     },
     {
         "Link": "https://www.youtube.com/live/jg5PrMOrTyE",
@@ -252,19 +252,13 @@
         "Link": "https://www.youtube.com/live/HjRZNBm1kms",
         "Description": "Sensoji Temple, Asakusa, Tokyo 浅草寺",
         "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["temple","sensoji","asakusa"]
     },
     {
         "Link": "https://www.youtube.com/live/Iv2VUE_UhRQ",
         "Description": "KAMIKOCHI KAPPA-BASHI 上高地河童橋ライブカメラ",
         "Location": "Tokyo",
-        "Tags": []
-    },
-    {
-        "Link": "https://www.youtube.com/live/XDVMh190XH4",
-        "Description": "Shinjuku, Tokyo (新宿 - 東京)",
-        "Location": "Tokyo",
-        "Tags": []
+        "Tags": ["kamikochi","kappa-bashi", "tokyo"]
     },
     {
         "Link": "https://www.youtube.com/live/m_WCI3EQRwQ",
@@ -273,7 +267,7 @@
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/8FUL47uSV1U",
+        "Link": "https://www.youtube.com/live/qBw-OnCM5L4",
         "Description": "Jizo Hot Spring, Gunma 地蔵温泉",
         "Location": "Gunma",
         "Tags": []
@@ -282,27 +276,27 @@
         "Link": "https://www.youtube.com/live/GrEEoEmmrKs",
         "Description": "Yubatake (Kusatsu Onsen), Gunma 湯畑",
         "Location": "Gunma",
-        "Tags": []
+        "Tags": ["onsen","yubatake","kusatsu", "gunma"]
     },
     {
         "Link": "https://www.youtube.com/live/s--MDmshT3I",
         "Description": "Mt. Hakodate Ropeway,Hakodate 函館山",
         "Location": "Hakodate",
-        "Tags": []
+        "Tags": ["ropeway","hakodate"]
     },
     {
         "Link": "https://www.youtube.com/live/9Si8-fRvCdI",
         "Description": "Awaraonsen Station, Awara , Fukui 芦原温泉駅",
         "Location": "Fukui",
         "Tags": [
-            "Train Station"
+            "train Station","fukui"
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/orjgCwFT_lY",
+        "Link": "https://www.youtube.com/live/x3P3N3VGvtU",
         "Description": "Minatomirai, Yokohama 横浜みなとみらい",
         "Location": "Yokohama",
-        "Tags": []
+        "Tags": ["waterfront","yokohama","skyline","minatomirai"]
     },
     {
         "Link": "https://www.youtube.com/live/ZpzNv_hNxPE",
@@ -317,7 +311,7 @@
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/SMbUpoxA_jc",
+        "Link": "https://www.youtube.com/live/zsxpGp-BnQ8",
         "Description": "Suzu ,Ishikawa 珠洲市(石川県)",
         "Location": "Ishikawa",
         "Tags": []
@@ -335,13 +329,13 @@
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/qz8F44n5DEw",
-        "Description": "Abeno Harukas,Osaka,",
+        "Link": "https://www.youtube.com/live/GCxs-DhQs08",
+        "Description": "Abeno Harukas,Osaka あべのハルカス",
         "Location": "Osaka",
-        "Tags": []
+        "Tags": ["city view","skyline", "osaka"]
     },
     {
-        "Link": "https://www.youtube.com/live/rN0TtoZVGls",
+        "Link": "https://www.youtube.com/live/hprCZJVkdpk",
         "Description": "Osaka Airport 大阪・伊丹空港✈️航空ライブカメラ",
         "Location": "Osaka",
         "Tags": []
@@ -359,19 +353,19 @@
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/FZTy-dTRiyw",
+        "Link": "https://www.youtube.com/live/7lcPQ97iv5I",
         "Description": "Osaka Live Camera 大阪ライブカメラ",
         "Location": "Osaka",
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/Tjr2tG_Wg70",
-        "Description": "Osaka Itami Airport",
+        "Link": "https://www.youtube.com/live/KuTnm6CSqag",
+        "Description": "Osaka Itami Airport 伊丹空港ライブカメラ",
         "Location": "Osaka",
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/KmTnV2ocXHE",
+        "Link": "https://www.youtube.com/live/xdx349hEsck",
         "Description": "Osaka 東海道本線 (JR京都線)・おおさか東線(梅田貨物線)ライブカメラ",
         "Location": "Osaka",
         "Tags": []
@@ -383,7 +377,7 @@
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/Z4uD7V4d0zc",
+        "Link": "https://www.youtube.com/live/z3nI9JPzlpU",
         "Description": "Osaka Mountain View 金剛山ライブカメラ 即時影像",
         "Location": "Osaka",
         "Tags": []
@@ -395,7 +389,7 @@
         "Tags": []
     },
     {
-        "Link": "https://www.youtube.com/live/u9CjEgmvMM0",
+        "Link": "https://www.youtube.com/live/fGccRlcUH-0",
         "Description": "Osaka 動くカメラ 大阪の今の風景",
         "Location": "Osaka",
         "Tags": []
@@ -429,7 +423,7 @@
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/PXg3ZXgMkGk",
+        "Link": "https://www.youtube.com/live/X5rq4ioggLk",
         "Description": "Hanamikoji Street, Kyoto 京都 花見小路",
         "Location": "Kyoto",
         "Tags": []
@@ -487,23 +481,23 @@
         "Description": "Sapporo station (札幌駅)",
         "Location": "Sapporo",
         "Tags": [
-            "hokkaido"
+            "hokkaido", "sapporo","train station","railway"
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/3PuX_rk0TXo",
-        "Description": "Sapporo Mt.Moiwa, 札幌藻岩山",
+        "Link": "https://www.youtube.com/live/WwBtKmXm9dM",
+        "Description": "Sapporo Mt.Moiwa at the summit observation deck | 札幌藻岩山 山頂展望台ライブカメラ",
         "Location": "Sapporo",
         "Tags": [
-            "hokkaido"
+            "hokkaido","sapporo","skyline"
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/bt3MI1E6gmE",
+        "Link": "https://www.youtube.com/live/_6Zpd48bjYk",
         "Description": "Tokachi Big Bridge over the Tokachi river, Hokkaido 十勝大橋",
         "Location": "Tokachi",
         "Tags": [
-            "hokkaido"
+            "hokkaido","bridge","tokachi","river"
         ]
     },
     {
@@ -515,14 +509,6 @@
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/JOfduRVEYwQ",
-        "Description": "Hiroshima Peace Memorial Park (広島平和記念公園)",
-        "Location": "Hiroshima",
-        "Tags": [
-            "hiroshima"
-        ]
-    },
-    {
         "Link": "https://www.youtube.com/live/Nrz-uQdijNo",
         "Description": "Kokusai Street, Okinawa (沖縄国際通り)",
         "Location": "Okinawa",
@@ -531,19 +517,19 @@
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/54ZyYMfyGnE",
+        "Link": "https://www.youtube.com/live/WIYUrH4luck",
         "Description": "Ojana intersection, Ginowan City, Okinawa (沖縄県宜野湾市大謝名交差点)",
         "Location": "Okinawa",
         "Tags": [
-            "ginowan"
+            "ginowan","city view"
         ]
     },
     {
-        "Link": "https://www.youtube.com/live/prFHxkdE3GY",
+        "Link": "https://www.youtube.com/live/AhQErfreEOE",
         "Description": "Kariyushi Beach Resort,Okinawa (沖縄県国頭郡恩納村)",
         "Location": "Okinawa",
         "Tags": [
-            "kariyushi"
+            "kariyushi","beach","resort"
         ]
     },
     {
@@ -551,21 +537,21 @@
         "Description": "Naha,Okinawa (那覇市)",
         "Location": "Okinawa",
         "Tags": [
-            "naha"
+            "naha","okinawa"
         ]
     },
     {
         "Link": "https://www.youtube.com/live/ZJg8Q8Svhr8",
         "Description": "Ishigaki Island, Okinawa (石垣島)",
         "Location": "Okinawa",
-        "Tags": []
+        "Tags": ["city view","okinawa","skyline"]
     },
     {
         "Link": "https://www.youtube.com/live/Sv9hcJ3k5h4",
         "Description": "Mt.Fuji",
         "Location": "Kawaguchiko",
         "Tags": [
-            "mt.fuji"
+            "mt.fuji","kawaguchiko"
         ]
     },
     {
@@ -600,20 +586,20 @@
         "Link": "https://www.youtube.com/live/qYnCG4J26d8",
         "Description": "Lake Ashi, Hakone 雲海の宿 ホテル四季の館箱根芦ノ湖 ライブ配信",
         "Location": "Hakone",
-        "Tags": []
+        "Tags": ["river","lake","hakone"]
     },
     {
         "Link": "https://www.youtube.com/live/AU_2zfM4m68",
         "Description": "Kobe Waterfront 神戸ウォーターフロント",
         "Location": "Kobe",
-        "Tags": []
+        "Tags": ["waterfront","kobe"]
     },
     {
         "Link": "https://www.youtube.com/live/8tDuhb9QnQ4",
         "Description": "JR Sannomiya Station,Kobe JR三ノ宮駅",
         "Location": "Kobe",
         "Tags": [
-            "train station"
+            "train station","railway"
         ]
     },
     {
@@ -627,7 +613,7 @@
         "Description": "Kyoto Station Live Cam JR京都駅 鉄道ライブカメラ 京都ライブカメラ 京都駅 新幹線 東海道線",
         "Location": "Kyoto",
         "Tags": [
-            "train station"
+            "train station","railway","kyoto station"
         ]
     },
     {
@@ -635,14 +621,14 @@
         "Description": "Kyoto Station Bus Terminal 京都駅前バス乗り場ライブカメラ",
         "Location": "Kyoto",
         "Tags": [
-            "bus station"
+            "bus station","bus"
         ]
     },
     {
         "Link": "https://www.youtube.com/live/CO_ZjH6N7RE",
         "Description": "Kyoto Station Hachijo Taxi Station 京都駅八条口タクシー乗り場ライブ中継カメラ(京都市観光協会公式)",
         "Location": "Kyoto",
-        "Tags": []
+        "Tags": ["taxui","taxi station","kyoto station"]
     },
     {
         "Link": "https://www.youtube.com/live/Gxt3YCa2Phc",
@@ -663,19 +649,19 @@
         "Link": "https://www.youtube.com/live/slOgQojt8w8",
         "Description": "Chuo Expressway, Uenohara, Yamanashi 中央自動車道 上野原",
         "Location": "Yamanashi",
-        "Tags": []
+        "Tags": ["expressway","uenohara","yamanashi","road"]
     },
     {
         "Link": "https://www.youtube.com/live/FsL_KQz4gpw",
         "Description": "Moto Hachioji Bus Stop, Chuo Expressway 中央自動車道 元八王子バス停",
         "Location": "Yamanashi",
-        "Tags": []
+        "Tags": ["bus station","expressway","road"]
     },
     {
         "Link": "https://www.youtube.com/live/Gn2CJjzY068",
         "Description": "Lake Yamanakako, Yamanashi (山中湖)",
         "Location": "Yamanashi",
-        "Tags": []
+        "Tags": ["lake","yamanakako","yamanashi"]
     },
     {
         "Link": "https://www.youtube.com/live/WtkI9yUqUxk",
@@ -726,14 +712,14 @@
         "Link": "https://www.youtube.com/live/WtkI9yUqUxk",
         "Description": "Enoshima Island, Kanagawa 江ノ島",
         "Location": "Enoshima",
-        "Tags": []
+        "Tags": ["island","enoshima","kanagawa"]
     },
     {
         "Link": "https://www.youtube.com/live/HvJdPF46kak",
         "Description": "Zenkoji Temple , Nagano 善光寺",
         "Location": "Zenkoji Temple",
         "Tags": [
-            "Nagano"
+            "Nagano","temple","zenkoji"
         ]
     },
     {
@@ -741,7 +727,7 @@
         "Description": "Matsumoto Castle Cam 4, Nagano",
         "Location": "Matsumoto",
         "Tags": [
-            "Nagano"
+            "Nagano","castle","matsumoto"
         ]
     },
     {
@@ -756,14 +742,14 @@
         "Link": "https://www.youtube.com/live/Cw91vSGfmRc",
         "Description": "Fukuoka Airport Live Camera 福岡空港ライブカメラ",
         "Location": "Fukuoka",
-        "Tags": []
+        "Tags": ["airport","fukuoka"]
     },
     {
         "Link": "https://www.youtube.com/live/3D1NIpeZyBg",
         "Description": "Hakata station in Fukuoka, Kyushu 福岡・博多駅前ライブカメラ",
         "Location": "Fukuoka",
         "Tags": [
-            "Kyushu"
+            "Kyushu","railway","train station","fukuoka"
         ]
     },
     {
@@ -806,13 +792,13 @@
         "Link": "https://www.youtube.com/live/OV0JEv6C2QQ",
         "Description": "Nishi Seto Expressway,Shimanami Kaido, Shikoku island 今治市としまなみ海道",
         "Location": "Shikoku island",
-        "Tags": []
+        "Tags": ["expressway","shimanami kaido","shikoku"]
     },
     {
         "Link": "https://www.youtube.com/live/RT_yg_qsK_M",
         "Description": "Kusatsu Onsen, Gunma 草津温泉",
         "Location": "Gunma",
-        "Tags": []
+        "Tags": ["onsen","kusatsu","gunma"]
     },
     {
         "Link": "https://www.youtube.com/live/6S4qvf97cbQ",
