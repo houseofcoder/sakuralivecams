@@ -4,13 +4,29 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://sakuralivecams.com/</loc>
-  <lastmod>2024-12-13T08:25:51+00:00</lastmod>
-</url>
-
-
+      <url>
+        <loc>https://sakuralivecams.com/</loc>
+        <lastmod>2025-08-18T18:30:42+00:00</lastmod>
+        <priority>1.00</priority>
+      </url>
+      <url>
+        <loc>https://sakuralivecams.com/contact.html</loc>
+        <lastmod>2025-08-18T18:30:42+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://sakuralivecams.com/privacy.html</loc>
+        <lastmod>2025-08-18T18:30:42+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://sakuralivecams.com/terms.html</loc>
+        <lastmod>2025-08-18T18:30:42+00:00</lastmod>
+        <priority>0.80</priority>
+      </url>
+      <url>
+        <loc>https://sakuralivecams.com/index.html</loc>
+        <lastmod>2025-08-18T18:30:42+00:00</lastmod>
+        <priority>0.64</priority>
+      </url>
 </urlset>
