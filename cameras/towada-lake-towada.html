@@ -186,7 +186,7 @@
 
             <!-- Copyright -->
             <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
-                <p>&copy; 2025 SakuraLive. All rights reserved. Live webcams from Japan - Tokyo, Osaka, Kyoto and beyond.</p>
+                <p>&copy; <span id="copyright-year"></span> SakuraLive. All rights reserved. Live webcams from Japan - Tokyo, Osaka, Kyoto and beyond.</p>
             </div>
         </div>
     </footer>
@@ -207,6 +207,7 @@
 
         updateTime();
         setInterval(updateTime, 1000);
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
