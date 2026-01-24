@@ -586,33 +586,76 @@
 
     <!-- Footer -->
     <footer class="bg-black text-gray-300">
-        <div class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <!-- Column 1: Brand -->
             <div>
-                <div class="flex items-center gap-3 mb-2">
+                <div class="flex items-center gap-3 mb-4">
                     <img src="assets/images/logo.png" alt="SakuraLive" class="h-8 w-8 rounded">
-                    <span class="font-semibold text-white">SakuraLive</span>
+                    <span class="font-semibold text-white text-lg">SakuraLive</span>
                 </div>
-                <p class="text-sm">Live webcams from Tokyo, Osaka, Kyoto, Sapporo, airports, skylines and more.</p>
-            </div>
-            <nav class="text-sm">
-                <h4 class="font-semibold text-white mb-2">Links</h4>
-                <ul class="space-y-1">
-                    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-                    <li><a href="privacy.html" class="hover:text-white">Privacy</a></li>
-                    <li><a href="terms.html" class="hover:text-white">Terms</a></li>
-                    <li><a href="sitemap.xml" class="hover:text-white">Sitemap</a></li>
-                </ul>
-            </nav>
-            <div class="text-sm">
-                <h4 class="font-semibold text-white mb-2">Get the App</h4>
-                <a href="https://play.google.com/store/apps/details?id=com.sakuralive" target="_blank"
-                    class="inline-flex">
+                <p class="text-sm mb-4">Watch live webcams from Japan's most iconic locations. Real-time HD streaming from Tokyo, Osaka, Kyoto, and beyond.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.sakuralive" target="_blank" class="inline-flex">
                     <img src="assets/images/download-playstore-img.png" alt="Get it on Google Play" class="h-10">
                 </a>
             </div>
+
+            <!-- Column 2: Major Cities -->
+            <div>
+                <h4 class="font-semibold text-white mb-4">Major Cities</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="cities/tokyo.html" class="hover:text-white transition">Tokyo Webcams (33+)</a></li>
+                    <li><a href="cities/osaka.html" class="hover:text-white transition">Osaka Webcams (25+)</a></li>
+                    <li><a href="cities/kyoto.html" class="hover:text-white transition">Kyoto Webcams (10+)</a></li>
+                    <li><a href="cities/hokkaido.html" class="hover:text-white transition">Hokkaido Webcams (15+)</a></li>
+                    <li><a href="cities/okinawa.html" class="hover:text-white transition">Okinawa Webcams (8+)</a></li>
+                    <li><a href="cities/yamanashi.html" class="hover:text-white transition">Mount Fuji Webcams (12+)</a></li>
+                    <li><a href="#cities" class="hover:text-white transition text-brand-400">View All Cities →</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Popular Cameras -->
+            <div>
+                <h4 class="font-semibold text-white mb-4">Popular Cameras</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="cameras/shibuya-crossing.html" class="hover:text-white transition">Shibuya Crossing</a></li>
+                    <li><a href="cameras/mt-fuji.html" class="hover:text-white transition">Mount Fuji</a></li>
+                    <li><a href="cameras/osaka-dotonbori-live-camera.html" class="hover:text-white transition">Osaka Dotonbori</a></li>
+                    <li><a href="cameras/tokyo-tower-railway.html" class="hover:text-white transition">Tokyo Tower</a></li>
+                    <li><a href="cameras/kyoto-tower-kyoto.html" class="hover:text-white transition">Kyoto Tower</a></li>
+                    <li><a href="cameras/sapporo-station.html" class="hover:text-white transition">Sapporo Station</a></li>
+                    <li><a href="#cameras" class="hover:text-white transition text-brand-400">Browse All Cameras →</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Resources -->
+            <div>
+                <h4 class="font-semibold text-white mb-4">Resources</h4>
+                <ul class="space-y-2 text-sm mb-6">
+                    <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+                    <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a></li>
+                    <li><a href="sitemap.xml" class="hover:text-white transition">Sitemap</a></li>
+                </ul>
+                
+                <h4 class="font-semibold text-white mb-3 text-sm">Browse by Type</h4>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#cameras?tag=airport" class="px-2 py-1 bg-white/10 hover:bg-white/20 rounded text-xs transition">Airports</a>
+                    <a href="#cameras?tag=beach" class="px-2 py-1 bg-white/10 hover:bg-white/20 rounded text-xs transition">Beaches</a>
+                    <a href="#cameras?tag=temple" class="px-2 py-1 bg-white/10 hover:bg-white/20 rounded text-xs transition">Temples</a>
+                    <a href="#cameras?tag=skyline" class="px-2 py-1 bg-white/10 hover:bg-white/20 rounded text-xs transition">Skylines</a>
+                    <a href="#cameras?tag=station" class="px-2 py-1 bg-white/10 hover:bg-white/20 rounded text-xs transition">Stations</a>
+                </div>
+            </div>
         </div>
-        <div class="border-t border-white/10 text-xs text-center py-3">© <span id="yearSpan"></span> SakuraLive</div>
-    </footer>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+            <p>© <span id="yearSpan2"></span> SakuraLive. All rights reserved.</p>
+            <p class="text-gray-400">Live webcams from across Japan in HD quality</p>
+        </div>
+    </div>
+</footer>
 
     <!-- JS (vanilla, lightweight) -->
     <script>
