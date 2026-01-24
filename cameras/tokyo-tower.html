@@ -82,6 +82,12 @@
                     <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                     LIVE
                 </span>
+                <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span id="current-time" class="font-medium">--:--:-- JST</span>
+                </span>
             </div>
         </div>
 
@@ -97,7 +103,15 @@
             <div class="md:col-span-2 space-y-6">
                 <div class="info-card">
                     <h2 class="text-2xl font-bold mb-4">About This Camera</h2>
-                    <p class="text-gray-300 mb-4">Live webcam view of Tokyo Tower, Japan.</p>
+                    <div class="text-gray-300 space-y-3 mb-4">
+                        <p><strong class="text-white">Tokyo Tower</strong> is a communications and observation tower standing 333 meters (1,092 feet) tall in the Minato district of Tokyo. Completed in 1958, this iconic red and white lattice tower was inspired by Paris's Eiffel Tower and has become one of Tokyo's most recognizable landmarks.</p>
+
+                        <p>The tower serves as a broadcast antenna for television and radio stations across the Kanto region. It features two observation decks - the Main Observatory at 150 meters and the Special Observatory at 250 meters - offering panoramic views of Tokyo and, on clear days, Mount Fuji in the distance.</p>
+
+                        <p><strong class="text-white">What you can see:</strong> This live camera captures stunning views of Tokyo Tower throughout the day and night. Watch as the tower transforms at sunset, when its brilliant illumination lights up against the Tokyo skyline. The camera view also showcases the surrounding cityscape, including nearby parks, buildings, and the bustling Minato ward.</p>
+
+                        <p><strong class="text-white">Best viewing times:</strong> Sunrise (6:00-7:00 JST) for golden morning light, sunset (17:00-18:00 JST) for dramatic colors, and evening hours when the tower's LED lights create spectacular displays. The illumination changes seasonally and for special events.</p>
+                    </div>
                     <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30">tower</span> <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30">tokyo tower</span> <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30">tokyo</span></div>
                 </div>
 
@@ -157,5 +171,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = {
+                timeZone: 'Asia/Tokyo',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+            const timeString = now.toLocaleTimeString('en-US', options) + ' JST';
+            document.getElementById('current-time').textContent = timeString;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
 </body>
 </html>
