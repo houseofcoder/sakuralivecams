@@ -83,6 +83,14 @@
                     <div class="text-sm opacity-90">No Subscription</div>
                 </div>
             </div>
+
+            <div class="mt-6 flex items-center gap-2 text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="text-lg font-semibold">Current Time (JST): <span id="current-time" class="font-bold">--:--:--</span></span>
+            </div>
+                    </div>
         </div>
     </section>
 
@@ -135,16 +143,47 @@
 
     <section class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="max-w-3xl">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">About Fukui Webcams</h2>
-                <p class="text-lg text-gray-700 mb-6">
-                    Our live webcams in Fukui provide real-time views of the city's most iconic locations. 
-                    Whether you're planning a trip, feeling nostalgic, or simply curious about life in Fukui, 
-                    these HD webcams offer an authentic glimpse into daily life in one of Japan's fascinating cities.
-                </p>
-                
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">About Fukui Webcams</h2>
+                    <div class="prose prose-lg text-gray-700 space-y-4">
+                        <p>
+                            Experience Fukui in real-time through our strategically positioned HD webcams.
+                            Whether you're planning your visit, reminiscing about past travels, or simply curious
+                            about life in Fukui, these live streams offer an authentic window into this
+                            captivating Japanese destination.
+                        </p>
+                        <p>
+                            Our cameras capture the essence of Fukui 24/7, from bustling daytime activity
+                            to serene evening atmospheres. Watch as locals go about their daily lives, observe
+                            weather patterns in real-time, and discover the unique rhythm that makes Fukui
+                            one of Japan's most fascinating locations.
+                        </p>
+                        <p>
+                            All webcam streams are free to watch, with no subscription required. Bookmark this
+                            page to check back anytime and stay connected to Fukui from anywhere in the world.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Places to Visit in Fukui</h3>
+                    <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start gap-2"><span class="text-rose-600 mt-1">•</span><span>Historic temples and shrines</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-600 mt-1">•</span><span>Traditional markets and shopping districts</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-600 mt-1">•</span><span>Local museums and cultural centers</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-600 mt-1">•</span><span>Scenic parks and gardens</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-600 mt-1">•</span><span>Popular restaurants and food streets</span></li>
+                <li class="flex items-start gap-2"><span class="text-rose-600 mt-1">•</span><span>Historic landmarks and monuments</span></li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-rose-50 rounded-lg">
+                        <p class="text-sm text-gray-700">
+                            <strong class="text-rose-700">Pro Tip:</strong> Use our live webcams to check current
+                            weather conditions and crowd levels before visiting popular attractions in Fukui.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
     </section>
 
     <section class="py-12 bg-gray-50">
@@ -154,15 +193,81 @@
         </div>
     </section>
 
-    <footer class="bg-black text-gray-300 py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p>&copy; 2025 SakuraLive. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="../privacy.html" class="hover:text-white">Privacy</a>
-                <a href="../terms.html" class="hover:text-white">Terms</a>
-                <a href="../contact.html" class="hover:text-white">Contact</a>
+    <footer class="bg-black py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- About Section -->
+                <div class="md:col-span-1">
+                    <h3 class="text-white font-bold text-lg mb-3">SakuraLive</h3>
+                    <p class="text-gray-400 text-sm">Experience Japan in real-time with 200+ live webcams across Tokyo, Osaka, Kyoto, and more. Watch live streams 24/7 from iconic landmarks, bustling streets, and scenic locations.</p>
+                </div>
+
+                <!-- Popular Cities -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Popular Cities</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tokyo.html" class="text-gray-400 hover:text-white transition">Tokyo Webcams</a></li>
+                        <li><a href="osaka.html" class="text-gray-400 hover:text-white transition">Osaka Webcams</a></li>
+                        <li><a href="kyoto.html" class="text-gray-400 hover:text-white transition">Kyoto Webcams</a></li>
+                        <li><a href="okinawa.html" class="text-gray-400 hover:text-white transition">Okinawa Webcams</a></li>
+                        <li><a href="hokkaido.html" class="text-gray-400 hover:text-white transition">Hokkaido Webcams</a></li>
+                    </ul>
+                </div>
+
+                <!-- More Destinations -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3">More Destinations</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="yokohama.html" class="text-gray-400 hover:text-white transition">Yokohama Webcams</a></li>
+                        <li><a href="fukuoka.html" class="text-gray-400 hover:text-white transition">Fukuoka Webcams</a></li>
+                        <li><a href="hiroshima.html" class="text-gray-400 hover:text-white transition">Hiroshima Webcams</a></li>
+                        <li><a href="nagano.html" class="text-gray-400 hover:text-white transition">Nagano Webcams</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Browse All Cameras</a></li>
+                    </ul>
+                </div>
+
+                <!-- Information -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Information</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="../privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="../terms.html" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="../contact.html" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; <span id="copyright-year"></span> SakuraLive. All rights reserved. Live webcams from Japan - Tokyo, Osaka, Kyoto and beyond.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = {
+                timeZone: 'Asia/Tokyo',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+            const timeString = now.toLocaleTimeString('en-US', options);
+            const timeElement = document.getElementById('current-time');
+            if (timeElement) {
+                timeElement.textContent = timeString;
+            }
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+
+        const copyrightYear = document.getElementById('copyright-year');
+        if (copyrightYear) {
+            copyrightYear.textContent = new Date().getFullYear();
+        }
+    </script>
 </body>
 </html>
