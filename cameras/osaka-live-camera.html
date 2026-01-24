@@ -82,6 +82,12 @@
                     <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                     LIVE
                 </span>
+                <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span id="current-time" class="font-medium">--:--:-- JST</span>
+                </span>
             </div>
         </div>
 
@@ -97,7 +103,15 @@
             <div class="md:col-span-2 space-y-6">
                 <div class="info-card">
                     <h2 class="text-2xl font-bold mb-4">About This Camera</h2>
-                    <p class="text-gray-300 mb-4">Live webcam view of Osaka Live Camera, Japan.</p>
+                                        <div class="text-gray-300 space-y-3 mb-4">
+                        <p>Experience the vibrant atmosphere of <strong class="text-white">Osaka Live Camera</strong> through this live streaming webcam. Located in Osaka, Japan, this camera provides real-time views of one of the area's notable locations, bringing you closer to Japanese culture and daily life.</p>
+
+                        <p>This live feed offers an authentic window into Osaka, allowing viewers from around the world to observe the local atmosphere, weather conditions, and the dynamic rhythm of Japanese life as it unfolds in real-time.</p>
+
+                        <p><strong class="text-white">What you can see:</strong> Watch the area come alive throughout the day, from the early morning hours through the evening. The camera captures the authentic character of this location, including pedestrian activity, local architecture, and the changing ambiance across different times of day.</p>
+
+                        <p><strong class="text-white">Best viewing times:</strong> Early morning (6:00-8:00 JST) to see the day beginning, midday (11:00-14:00 JST) for peak activity, sunset hours (17:00-19:00 JST) for beautiful lighting, and evening (19:00-22:00 JST) when many locations showcase their illuminated charm.</p>
+                    </div>
                     <div class="flex flex-wrap gap-2"><span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium border border-blue-500/30">osaka</span></div>
                 </div>
 
@@ -157,5 +171,23 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const options = {
+                timeZone: 'Asia/Tokyo',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+            const timeString = now.toLocaleTimeString('en-US', options) + ' JST';
+            document.getElementById('current-time').textContent = timeString;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
 </body>
 </html>
