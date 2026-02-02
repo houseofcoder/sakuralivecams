@@ -189,6 +189,15 @@ def translate_city_page(content, translations, city_name):
     """Translate a city page."""
     t = translations
 
+    # Get city slug for lookup
+    city_slug = city_name.lower().replace(' ', '-')
+
+    # Get Japanese city name
+    ja_city_name = t.get('city_names', {}).get(city_slug, city_name)
+
+    # Get Japanese description
+    ja_description = t.get('city_descriptions', {}).get(city_slug, t.get('city_descriptions', {}).get('default', ''))
+
     # Change html lang attribute
     content = re.sub(r'<html lang="en">', '<html lang="ja">', content)
 
@@ -198,8 +207,43 @@ def translate_city_page(content, translations, city_name):
         t['header']['tagline_short']
     )
 
+    # Translate page title in <title> tag
+    content = re.sub(
+        rf'<title>{re.escape(city_name)} Live Webcams[^<]*</title>',
+        f'<title>{ja_city_name}ライブカメラ | SakuraLive</title>',
+        content
+    )
+
+    # Translate h1 heading
+    content = re.sub(
+        rf'<h1[^>]*>{re.escape(city_name)} Live Webcams</h1>',
+        f'<h1 class="text-4xl md:text-6xl font-bold text-white mb-6">{ja_city_name}ライブカメラ</h1>',
+        content
+    )
+
+    # Translate the description paragraph - match various patterns
+    content = re.sub(
+        r'<p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl">[^<]+</p>',
+        f'<p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl">{ja_description}</p>',
+        content
+    )
+
     # Translate breadcrumb
     content = re.sub(r'>Home</a>', f'>{t["nav"]["home"]}</a>', content)
+
+    # Translate breadcrumb city name
+    content = re.sub(
+        rf'<span class="text-white font-semibold">{re.escape(city_name)}</span>',
+        f'<span class="text-white font-semibold">{ja_city_name}</span>',
+        content
+    )
+
+    # Translate "All X Webcams" section header
+    content = re.sub(
+        rf'All {re.escape(city_name)} Webcams \((\d+)\)',
+        lambda m: f'{ja_city_name}のカメラ一覧（{m.group(1)}台）',
+        content
+    )
 
     # Translate statistics labels
     content = re.sub(r'<div class="text-sm opacity-90">Live Cameras</div>',
@@ -215,6 +259,35 @@ def translate_city_page(content, translations, city_name):
     content = re.sub(r'Current Time \(JST\):',
                      f'{t["city_page"]["current_time"]}:', content)
 
+    # Translate "About X Webcams" section
+    content = re.sub(
+        rf'<h2[^>]*>About {re.escape(city_name)} Webcams</h2>',
+        f'<h2 class="text-3xl font-bold text-gray-900 mb-6">{ja_city_name}ライブカメラについて</h2>',
+        content
+    )
+
+    # Translate "Places to Visit" section
+    content = re.sub(
+        rf'<h3[^>]*>Places to Visit in {re.escape(city_name)}</h3>',
+        f'<h3 class="text-2xl font-bold text-gray-900 mb-6">{ja_city_name}の観光スポット</h3>',
+        content
+    )
+
+    # Translate "Pro Tip" label
+    content = re.sub(
+        r'<strong class="text-rose-700">Pro Tip:</strong>',
+        '<strong class="text-rose-700">ヒント：</strong>',
+        content
+    )
+
+    # Translate footer section headers
+    content = re.sub(r'<h4 class="text-white font-semibold mb-3">Popular Cities</h4>',
+                     '<h4 class="text-white font-semibold mb-3">人気の都市</h4>', content)
+    content = re.sub(r'<h4 class="text-white font-semibold mb-3">More Destinations</h4>',
+                     '<h4 class="text-white font-semibold mb-3">その他の地域</h4>', content)
+    content = re.sub(r'<h4 class="text-white font-semibold mb-3">Information</h4>',
+                     '<h4 class="text-white font-semibold mb-3">その他</h4>', content)
+
     # Update link to index
     content = re.sub(r'href="\.\./index\.html"', 'href="../index.html"', content)
 
@@ -223,6 +296,12 @@ def translate_city_page(content, translations, city_name):
 def translate_camera_page(content, translations, camera_name, city_name):
     """Translate a camera page."""
     t = translations
+
+    # Get city slug for lookup
+    city_slug = city_name.lower().replace(' ', '-')
+
+    # Get Japanese city name
+    ja_city_name = t.get('city_names', {}).get(city_slug, city_name)
 
     # Change html lang attribute
     content = re.sub(r'<html lang="en">', '<html lang="ja">', content)
@@ -233,20 +312,55 @@ def translate_camera_page(content, translations, camera_name, city_name):
         t['header']['tagline_short']
     )
 
-    # Translate breadcrumb
+    # Translate breadcrumb - Home link
     content = re.sub(r'>Home</a>', f'>{t["nav"]["home"]}</a>', content)
+
+    # Translate breadcrumb - city link text (but keep the href)
+    content = re.sub(
+        rf'href="(\.\./cities/{re.escape(city_slug)}\.html)" class="hover:text-white">{re.escape(city_name)}',
+        lambda m: f'href="{m.group(1)}" class="hover:text-white">{ja_city_name}',
+        content
+    )
+
+    # Translate location link under camera title
+    content = re.sub(
+        rf'<a href="\.\./cities/{re.escape(city_slug)}\.html" class="hover:text-white">{re.escape(city_name)}, Japan</a>',
+        f'<a href="../cities/{city_slug}.html" class="hover:text-white">{ja_city_name}、日本</a>',
+        content
+    )
+
+    # Translate "LIVE" badge
+    content = re.sub(r'>\s*LIVE\s*</span>', '>ライブ</span>', content)
 
     # Translate "About This Camera" heading
     content = re.sub(r'<h2 class="text-2xl font-bold mb-4">About This Camera</h2>',
                      f'<h2 class="text-2xl font-bold mb-4">{t["camera_page"]["about_camera"]}</h2>', content)
 
+    # Translate "Why watch:" label
+    content = re.sub(r'<strong class="text-white">Why watch:</strong>',
+                     f'<strong class="text-white">{t["camera_page"]["why_watch"]}</strong>', content)
+
+    # Translate "Best viewing times:" label
+    content = re.sub(r'<strong class="text-white">Best viewing times:</strong>',
+                     f'<strong class="text-white">{t["camera_page"]["best_viewing"]}</strong>', content)
+
     # Translate "Share This Camera" heading
     content = re.sub(r'<h3 class="text-xl font-bold mb-3">Share This Camera</h3>',
                      f'<h3 class="text-xl font-bold mb-3">{t["camera_page"]["share_camera"]}</h3>', content)
 
-    # Translate section headings that contain city name
-    content = re.sub(r'>More Cameras in ([^<]+)</h3>',
-                     lambda m: f'>{m.group(1)}{t["camera_page"]["related_cameras"].replace("{city}", "")}</h3>', content)
+    # Translate "More Cameras in X" heading
+    content = re.sub(
+        rf'<h3[^>]*>More Cameras in {re.escape(city_name)}</h3>',
+        f'<h3 class="text-2xl font-bold mb-6">{ja_city_name}のその他のカメラ</h3>',
+        content
+    )
+
+    # Translate "View All X Cameras" link
+    content = re.sub(
+        rf'>View All {re.escape(city_name)} Cameras →</a>',
+        f'>{ja_city_name}のカメラをすべて見る →</a>',
+        content
+    )
 
     # Update links
     content = re.sub(r'href="\.\./index\.html"', 'href="../index.html"', content)
@@ -257,6 +371,13 @@ def translate_camera_page(content, translations, camera_name, city_name):
 def add_hreflang_to_content(content, page_path, is_japanese):
     """Add hreflang tags to the HTML content."""
     hreflang_tags = get_hreflang_tags(page_path, is_japanese)
+
+    # First, remove any existing hreflang tags to avoid duplicates
+    content = re.sub(
+        r'\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*">\s*',
+        '',
+        content
+    )
 
     # Insert after <meta charset="UTF-8">
     if '<meta charset="UTF-8"' in content:
@@ -273,8 +394,15 @@ def add_language_switcher(content, current_lang, page_path):
     """Add language switcher to the header."""
     switcher_html = get_language_switcher_html(current_lang, page_path)
 
-    # Find the nav element and add language switcher after it
-    # Look for the Google Play Store button and add before it
+    # First, remove any existing language switchers to avoid duplicates
+    content = re.sub(
+        r'<div class="flex items-center gap-2 text-sm">\s*<a href="[^"]*"[^>]*>EN</a>\s*<span class="text-gray-500">\|</span>\s*<a href="[^"]*"[^>]*>日本語</a>\s*</div>\s*',
+        '',
+        content,
+        flags=re.DOTALL
+    )
+
+    # Find the Google Play Store button and add language switcher before it
     pattern = r'(<a href="https://play\.google\.com/store/apps/details\?id=com\.sakuralive"[^>]*>)'
     replacement = f'{switcher_html}\n            \\1'
 
