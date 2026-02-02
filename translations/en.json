@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "lang": "en",
+    "lang_name": "English",
+    "lang_native": "English"
+  },
+  "header": {
+    "brand_name": "SakuraLive",
+    "tagline": "Watch live webcams across Japan",
+    "tagline_short": "Live Webcams from Japan"
+  },
+  "nav": {
+    "home": "Home",
+    "cities": "Cities",
+    "cameras": "Cameras",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Live Japan Webcams - Watch 200+ Real-Time HD Cameras from Tokyo, Kyoto, Osaka & Beyond",
+    "subtitle": "Experience Japan live with FREE HD webcam streams from 34+ cities. Watch Shibuya Crossing, Mt Fuji, temples, airports, and scenic landmarks - all streaming 24/7"
+  },
+  "stats": {
+    "cameras": "Live Cameras",
+    "cities": "Cities & Regions",
+    "streaming": "Live Streaming",
+    "free": "Free Access"
+  },
+  "cities_section": {
+    "title": "Explore Japan by City",
+    "subtitle": "Browse our curated collection of live webcams organized by major cities and regions across Japan",
+    "view_all": "View All Cities",
+    "show_less": "Show Less",
+    "all_locations": "All Locations"
+  },
+  "city_cards": {
+    "tokyo": {
+      "name": "Tokyo",
+      "description": "Japan's vibrant capital with 33+ cameras"
+    },
+    "osaka": {
+      "name": "Osaka",
+      "description": "Japan's kitchen with 25+ cameras"
+    },
+    "kyoto": {
+      "name": "Kyoto",
+      "description": "Ancient capital with 10+ cameras"
+    },
+    "hokkaido": {
+      "name": "Hokkaido",
+      "description": "Northern island with 15+ cameras"
+    },
+    "okinawa": {
+      "name": "Okinawa",
+      "description": "Tropical paradise with 8+ cameras"
+    },
+    "mount_fuji": {
+      "name": "Mount Fuji",
+      "description": "Japan's icon with 12+ cameras"
+    }
+  },
+  "filters": {
+    "title": "Filter Streams",
+    "showing_results": "Showing {count} results",
+    "location_placeholder": "Select location",
+    "search_placeholder": "Search tags (e.g., skyline, airport)...",
+    "clear_filters": "Clear Filters",
+    "tip": "Tip: tap a tag to toggle it. Tags on cards are clickable too."
+  },
+  "tags": {
+    "airport": "Airport",
+    "city_view": "City View",
+    "skyline": "Skyline",
+    "shinjuku": "Shinjuku",
+    "beach": "Beach",
+    "temple": "Temple",
+    "station": "Station"
+  },
+  "camera_card": {
+    "watch_stream": "Watch Stream",
+    "live": "LIVE"
+  },
+  "why_watch": {
+    "title": "Why Watch Live Japan Webcams?",
+    "subtitle": "Experience Japan in real-time from anywhere in the world",
+    "tourism": {
+      "title": "Virtual Tourism & Trip Planning",
+      "description": "Plan your Japan trip by checking real-time weather, crowd levels at popular attractions, and seasonal highlights like cherry blossoms or autumn foliage. See exactly what to expect before you visit."
+    },
+    "cultural": {
+      "title": "Cultural Connection",
+      "description": "Stay connected to Japan from anywhere in the world. Watch daily life unfold at train stations, experience festivals in real-time, or simply enjoy the peaceful ambiance of Japanese temples and gardens."
+    },
+    "coverage": {
+      "title": "24/7 Live Coverage",
+      "description": "Never miss a moment with round-the-clock streaming from 200+ cameras. Watch sunrise over Mt Fuji, rush hour at Tokyo Station, or late-night neon lights in Osaka's Dotonbori district."
+    }
+  },
+  "about": {
+    "title": "About SakuraLive - Your Gateway to Japan",
+    "description_1": "SakuraLive is your premier destination for live webcams from Japan, featuring over 200 HD cameras across 34+ cities and regions.",
+    "description_2": "Our cameras capture everything from iconic landmarks to bustling train stations, serene temples, international airports, and beautiful beaches.",
+    "description_3": "Whether you're planning your first trip to Japan, reminiscing about past visits, studying Japanese culture, or simply curious about daily life in Japan, our free 24/7 live streams provide an authentic window into this fascinating country. All cameras are publicly available and completely free to watch—no registration or subscription required."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "Are these official live cameras?",
+      "answer": "We embed publicly available live streams hosted on platforms like YouTube. All cameras are publicly accessible and free to watch. We curate the best quality streams from across Japan to provide you with the most comprehensive collection available."
+    },
+    "q2": {
+      "question": "How do I find specific locations?",
+      "answer": "Browse our cities section to see all 200+ cameras organized by location, or use the tag filter to find cameras by category like \"Airport\", \"Temple\", \"Skyline\", \"Beach\", or \"Station\". You can also use the search function to find specific landmarks or locations."
+    },
+    "q3": {
+      "question": "Can I watch on mobile?",
+      "answer": "Yes! All cameras work perfectly on mobile devices through your web browser. For the best mobile experience, download our free Android app which offers optimized streaming and easier navigation."
+    },
+    "q4": {
+      "question": "What are the best times to watch?",
+      "answer": "It depends on what you want to see! Morning rush hour (7-9 AM JST) is exciting at train stations, midday (11 AM-2 PM JST) offers the best lighting for scenic views, sunset (5-6 PM JST) creates beautiful colors over Mt Fuji and cityscapes, and late evening (8 PM-midnight JST) showcases Japan's famous neon-lit entertainment districts."
+    }
+  },
+  "footer": {
+    "brand_description": "Watch live webcams from Japan's most iconic locations. Real-time HD streaming from Tokyo, Osaka, Kyoto, and beyond.",
+    "major_cities": "Major Cities",
+    "popular_cameras": "Popular Cameras",
+    "resources": "Resources",
+    "browse_by_type": "Browse by Type",
+    "view_all_cities": "View All Cities",
+    "browse_all_cameras": "Browse All Cameras",
+    "copyright": "All rights reserved.",
+    "quality_tagline": "Live webcams from across Japan in HD quality"
+  },
+  "city_page": {
+    "live_cameras": "Live Cameras",
+    "live_streaming": "Live Streaming",
+    "quality": "Quality",
+    "no_subscription": "No Subscription",
+    "current_time": "Current Time (JST)",
+    "all_webcams": "All {city} Webcams ({count})"
+  },
+  "camera_page": {
+    "about_camera": "About This Camera",
+    "share_camera": "Share This Camera",
+    "related_cameras": "More Cameras in {city}",
+    "view_all_in_city": "View All {city} Cameras",
+    "watch_description": "Watch the dynamic energy of {camera} through this live HD webcam.",
+    "stream_continuous": "Stream continuous views around the clock. Our high-definition camera captures this landmark in all its moods - sunrise lighting, afternoon crowds, sunset colors, and nighttime illumination.",
+    "why_watch": "Why watch:",
+    "why_watch_text": "This live camera serves multiple purposes - trip planning, weather monitoring, or pure enjoyment of Japan from afar. The high-quality stream reveals details that photos and recorded video cannot capture.",
+    "best_viewing": "Best viewing times:",
+    "best_viewing_text": "Early morning (6:00-8:00 JST) for serene atmosphere and soft lighting, midday (11:00-14:00 JST) for maximum activity, golden hour (17:00-19:00 JST) for beautiful light, and evening (19:00-23:00 JST) for illuminated scenes and nightlife."
+  },
+  "common": {
+    "japan": "Japan",
+    "watch": "Watch",
+    "free": "Free",
+    "hd": "HD",
+    "live": "LIVE",
+    "loading": "Loading...",
+    "error": "Error",
+    "close": "Close"
+  },
+  "seo": {
+    "home_title": "Watch Japan Live - 200+ FREE HD Webcams Tokyo, Kyoto, Osaka 24/7 | Best Japan Live Cams {year}",
+    "home_description": "Best Japan Webcam Site {year} - Watch 200+ FREE HD live webcams from Tokyo, Osaka, Kyoto - Shibuya Crossing, Mt Fuji, Dotonbori & more. 24/7 streaming, no registration, no fees. Updated daily."
+  }
+}
