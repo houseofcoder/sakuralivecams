@@ -213,6 +213,16 @@
   },
   "seo": {
     "home_title": "日本ライブカメラ - 東京・京都・大阪など200台以上の無料HDカメラ 24時間配信 | SakuraLive {year}",
-    "home_description": "日本最高のライブカメラサイト {year} - 東京、大阪、京都から200台以上の無料HDライブカメラ。渋谷スクランブル交差点、富士山、道頓堀など。24時間配信、登録不要、完全無料。"
+    "home_description": "日本最高のライブカメラサイト {year} - 東京、大阪、京都から200台以上の無料HDライブカメラ。渋谷スクランブル交差点、富士山、道頓堀など。24時間配信、登録不要、完全無料。",
+    "city_meta_description": "{city}のライブカメラ - 無料HD配信24時間。{city}の人気スポットをリアルタイムで視聴。登録不要、完全無料。",
+    "city_og_title": "{city}ライブカメラ - リアルタイム配信 | SakuraLive",
+    "city_schema_name": "{city}ライブカメラ",
+    "city_schema_description": "{city}のライブウェブカメラ。{city}の人気スポットをリアルタイムHD配信で視聴できます。",
+    "camera_title": "{camera}ライブカメラ - {city} 無料HD配信24時間 | SakuraLive",
+    "camera_meta_description": "{camera}のライブカメラを{city}から無料HD配信。24時間リアルタイム視聴、登録不要。日本最大のライブカメラサイト。",
+    "camera_og_title": "{camera} - ライブカメラ | SakuraLive",
+    "camera_og_description": "{city}の{camera}をライブ配信。リアルタイムHD映像を24時間無料で視聴。",
+    "camera_schema_name": "{camera} - ライブカメラ",
+    "camera_schema_description": "{city}の{camera}をリアルタイムHD配信。24時間無料でライブ視聴できます。"
   }
 }
