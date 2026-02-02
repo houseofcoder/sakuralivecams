@@ -195,8 +195,15 @@ def translate_city_page(content, translations, city_name):
     # Get Japanese city name
     ja_city_name = t.get('city_names', {}).get(city_slug, city_name)
 
-    # Get Japanese description
+    # Get Japanese description for page content
     ja_description = t.get('city_descriptions', {}).get(city_slug, t.get('city_descriptions', {}).get('default', ''))
+
+    # Get SEO translations
+    seo = t.get('seo', {})
+    ja_meta_desc = seo.get('city_meta_description', '').replace('{city}', ja_city_name)
+    ja_og_title = seo.get('city_og_title', '').replace('{city}', ja_city_name)
+    ja_schema_name = seo.get('city_schema_name', '').replace('{city}', ja_city_name)
+    ja_schema_desc = seo.get('city_schema_description', '').replace('{city}', ja_city_name)
 
     # Change html lang attribute
     content = re.sub(r'<html lang="en">', '<html lang="ja">', content)
@@ -205,6 +212,61 @@ def translate_city_page(content, translations, city_name):
     content = content.replace(
         'Live Webcams from Japan',
         t['header']['tagline_short']
+    )
+
+    # Translate meta description
+    content = re.sub(
+        r'<meta name="description" content="[^"]*">',
+        f'<meta name="description" content="{ja_meta_desc}">',
+        content
+    )
+
+    # Translate meta keywords to Japanese
+    content = re.sub(
+        r'<meta name="keywords" content="[^"]*">',
+        f'<meta name="keywords" content="{ja_city_name}ライブカメラ, {ja_city_name}ウェブカメラ, 日本ライブカメラ, {city_name}リアルタイム配信, 無料ライブカメラ">',
+        content
+    )
+
+    # Translate OG title
+    content = re.sub(
+        r'<meta property="og:title" content="[^"]*">',
+        f'<meta property="og:title" content="{ja_og_title}">',
+        content
+    )
+
+    # Translate OG description
+    content = re.sub(
+        r'<meta property="og:description" content="[^"]*">',
+        f'<meta property="og:description" content="{ja_meta_desc}">',
+        content
+    )
+
+    # Update OG URL to Japanese version
+    content = re.sub(
+        r'<meta property="og:url" content="https://sakuralivecams\.com/cities/',
+        '<meta property="og:url" content="https://sakuralivecams.com/ja/cities/',
+        content
+    )
+
+    # Translate Schema.org CollectionPage
+    content = re.sub(
+        r'"name": "[^"]*Live Webcams"',
+        f'"name": "{ja_schema_name}"',
+        content
+    )
+    content = re.sub(
+        r'("@type": "CollectionPage"[^}]*"description": ")[^"]*(")',
+        lambda m: f'{m.group(1)}{ja_schema_desc}{m.group(2)}',
+        content,
+        flags=re.DOTALL
+    )
+
+    # Update Schema URL to Japanese version
+    content = re.sub(
+        r'"url": "https://sakuralivecams\.com/cities/',
+        '"url": "https://sakuralivecams.com/ja/cities/',
+        content
     )
 
     # Translate page title in <title> tag
@@ -303,8 +365,87 @@ def translate_camera_page(content, translations, camera_name, city_name):
     # Get Japanese city name
     ja_city_name = t.get('city_names', {}).get(city_slug, city_name)
 
+    # Get SEO translations
+    seo = t.get('seo', {})
+    ja_title = seo.get('camera_title', '').replace('{camera}', camera_name).replace('{city}', ja_city_name)
+    ja_meta_desc = seo.get('camera_meta_description', '').replace('{camera}', camera_name).replace('{city}', ja_city_name)
+    ja_og_title = seo.get('camera_og_title', '').replace('{camera}', camera_name)
+    ja_og_desc = seo.get('camera_og_description', '').replace('{camera}', camera_name).replace('{city}', ja_city_name)
+    ja_schema_name = seo.get('camera_schema_name', '').replace('{camera}', camera_name)
+    ja_schema_desc = seo.get('camera_schema_description', '').replace('{camera}', camera_name).replace('{city}', ja_city_name)
+
     # Change html lang attribute
     content = re.sub(r'<html lang="en">', '<html lang="ja">', content)
+
+    # Translate page title
+    content = re.sub(
+        r'<title>[^<]*</title>',
+        f'<title>{ja_title}</title>',
+        content
+    )
+
+    # Translate meta description
+    content = re.sub(
+        r'<meta name="description" content="[^"]*">',
+        f'<meta name="description" content="{ja_meta_desc}">',
+        content
+    )
+
+    # Translate meta keywords
+    content = re.sub(
+        r'<meta name="keywords" content="[^"]*">',
+        f'<meta name="keywords" content="{camera_name}, {ja_city_name}ライブカメラ, 日本ウェブカメラ, ライブ配信, 無料カメラ">',
+        content
+    )
+
+    # Translate OG title
+    content = re.sub(
+        r'<meta property="og:title" content="[^"]*">',
+        f'<meta property="og:title" content="{ja_og_title}">',
+        content
+    )
+
+    # Translate OG description
+    content = re.sub(
+        r'<meta property="og:description" content="[^"]*">',
+        f'<meta property="og:description" content="{ja_og_desc}">',
+        content
+    )
+
+    # Update OG URL to Japanese version
+    content = re.sub(
+        r'<meta property="og:url" content="https://sakuralivecams\.com/cameras/',
+        '<meta property="og:url" content="https://sakuralivecams.com/ja/cameras/',
+        content
+    )
+
+    # Translate Schema.org VideoObject
+    content = re.sub(
+        r'"name": "[^"]*- Live Webcam"',
+        f'"name": "{ja_schema_name}"',
+        content
+    )
+    content = re.sub(
+        r'("@type": "VideoObject"[^}]*"description": ")[^"]*(")',
+        lambda m: f'{m.group(1)}{ja_schema_desc}{m.group(2)}',
+        content,
+        flags=re.DOTALL
+    )
+
+    # Update Schema inLanguage to Japanese
+    content = re.sub(
+        r'"inLanguage": "en"',
+        '"inLanguage": "ja"',
+        content
+    )
+
+    # Translate Breadcrumb Schema - "Home" to Japanese
+    content = re.sub(
+        r'("@type": "BreadcrumbList"[^}]*"name": ")Home(")',
+        lambda m: f'{m.group(1)}ホーム{m.group(2)}',
+        content,
+        flags=re.DOTALL
+    )
 
     # Translate header tagline
     content = content.replace(
