@@ -535,22 +535,44 @@ def translate_camera_page(content, translations, camera_name, city_name):
     content = re.sub(r'<h2 class="text-2xl font-bold mb-4">About This Camera</h2>',
                      f'<h2 class="text-2xl font-bold mb-4">{t["camera_page"]["about_camera"]}</h2>', content)
 
-    # Translate "Why watch:" label
-    content = re.sub(r'<strong class="text-white">Why watch:</strong>',
-                     f'<strong class="text-white">{t["camera_page"]["why_watch"]}</strong>', content)
+    # Get camera page translations
+    cp = t.get('camera_page', {})
 
-    # Translate "Best viewing times:" label
-    content = re.sub(r'<strong class="text-white">Best viewing times:</strong>',
-                     f'<strong class="text-white">{t["camera_page"]["best_viewing"]}</strong>', content)
+    # Build Japanese description content
+    ja_intro = cp.get('description_intro', '').replace('{camera}', camera_name).replace('{city}', ja_city_name)
+    ja_stream = cp.get('description_stream', '').replace('{camera}', camera_name).replace('{city}', ja_city_name)
+    ja_special_label = cp.get('what_makes_special', 'このカメラの特徴：')
+    ja_special_text = cp.get('what_makes_special_text', '').replace('{camera}', camera_name).replace('{city}', ja_city_name)
+    ja_optimal_label = cp.get('optimal_viewing', 'おすすめの視聴時間：')
+    ja_optimal_text = cp.get('optimal_viewing_text', '').replace('{camera}', camera_name).replace('{city}', ja_city_name)
+
+    # Build the new description HTML
+    new_desc_html = f'''<div class="text-gray-300 space-y-3 mb-4">
+                        <p>{ja_intro}</p>
+
+                        <p>{ja_stream}</p>
+
+                        <p><strong class="text-white">{ja_special_label}</strong> {ja_special_text}</p>
+
+                        <p><strong class="text-white">{ja_optimal_label}</strong> {ja_optimal_text}</p>
+                    </div>'''
+
+    # Replace the existing description content
+    content = re.sub(
+        r'<div class="text-gray-300 space-y-3 mb-4">.*?</div>\s*<div class="flex flex-wrap gap-2',
+        new_desc_html + '\n                    <div class="flex flex-wrap gap-2',
+        content,
+        flags=re.DOTALL
+    )
 
     # Translate "Share This Camera" heading
     content = re.sub(r'<h3 class="text-xl font-bold mb-3">Share This Camera</h3>',
                      f'<h3 class="text-xl font-bold mb-3">{t["camera_page"]["share_camera"]}</h3>', content)
 
-    # Translate "More Cameras in X" heading
+    # Translate "More from X" heading
     content = re.sub(
-        rf'<h3[^>]*>More Cameras in {re.escape(city_name)}</h3>',
-        f'<h3 class="text-2xl font-bold mb-6">{ja_city_name}のその他のカメラ</h3>',
+        rf'<h3[^>]*>More from {re.escape(city_name)}</h3>',
+        f'<h3 class="text-xl font-bold mb-4">{ja_city_name}のその他のカメラ</h3>',
         content
     )
 
