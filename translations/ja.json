@@ -98,7 +98,9 @@
   "about": {
     "title": "SakuraLiveについて - 日本への窓口",
     "description_1": "SakuraLiveは、34以上の都市・地域に200台以上のHDカメラを設置した、日本のライブカメラの総合サイトです。",
+    "description_1_cities": "<a href=\"cities/tokyo.html\" class=\"text-brand-600 hover:underline font-medium\">東京</a>（51台以上）、<a href=\"cities/osaka.html\" class=\"text-brand-600 hover:underline font-medium\">大阪</a>（22台以上）、<a href=\"cities/kyoto.html\" class=\"text-brand-600 hover:underline font-medium\">京都</a>（10台以上）、<a href=\"cities/hokkaido.html\" class=\"text-brand-600 hover:underline font-medium\">北海道</a>（15台以上）、<a href=\"cities/okinawa.html\" class=\"text-brand-600 hover:underline font-medium\">沖縄</a>（8台以上）などの主要都市からリアルタイムでライブ配信をご覧いただけます。",
     "description_2": "有名なランドマークから活気ある駅、静かな寺院、国際空港、美しいビーチまで、あらゆる場所を撮影しています。",
+    "description_2_landmarks": "<a href=\"cameras/shibuya-crossing-scramble-crossing.html\" class=\"text-brand-600 hover:underline font-medium\">渋谷スクランブル交差点</a>、<a href=\"cameras/mount-fuji-oshino.html\" class=\"text-brand-600 hover:underline font-medium\">富士山</a>、<a href=\"cameras/tokyo-tower.html\" class=\"text-brand-600 hover:underline font-medium\">東京タワー</a>、<a href=\"cameras/osaka-dotonbori-live-camera.html\" class=\"text-brand-600 hover:underline font-medium\">大阪・道頓堀</a>などの有名なランドマークから、活気ある<a href=\"#cameras?tag=station\" class=\"text-brand-600 hover:underline\">駅</a>、静かな<a href=\"#cameras?tag=temple\" class=\"text-brand-600 hover:underline\">寺院</a>、国際<a href=\"#cameras?tag=airport\" class=\"text-brand-600 hover:underline\">空港</a>、美しい<a href=\"#cameras?tag=beach\" class=\"text-brand-600 hover:underline\">ビーチ</a>まで。",
     "description_3": "初めての日本旅行を計画中の方、過去の訪問を懐かしむ方、日本文化を学んでいる方、日本の日常生活に興味がある方に、無料の24時間ライブ配信で本物の日本をお届けします。すべてのカメラは公開されており、登録不要・完全無料でご覧いただけます。"
   },
   "faq": {
