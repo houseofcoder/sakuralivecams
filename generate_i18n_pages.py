@@ -342,6 +342,64 @@ def translate_city_page(content, translations, city_name):
         content
     )
 
+    # Translate Pro Tip text content
+    pro_tip_text = t.get('city_pro_tip', {}).get('default', '').replace('{city}', ja_city_name)
+    content = re.sub(
+        r'Use our live webcams to check current\s+weather conditions and crowd levels before visiting popular attractions in [^.]+\.',
+        pro_tip_text,
+        content,
+        flags=re.DOTALL
+    )
+
+    # Translate About section paragraphs
+    city_about = t.get('city_about_content', {})
+    about_paragraphs = city_about.get(city_slug, city_about.get('default', []))
+
+    if about_paragraphs:
+        # Replace default placeholder in paragraphs if needed
+        about_paragraphs = [p.replace('{city}', ja_city_name) for p in about_paragraphs]
+
+        # Build the new about content HTML
+        new_about_html = '<div class="prose prose-lg text-gray-700 space-y-4">\n'
+        for para in about_paragraphs:
+            new_about_html += f'                        <p>\n                            {para}\n                        </p>\n'
+        new_about_html += '                    </div>'
+
+        # Replace the existing about content
+        content = re.sub(
+            r'<div class="prose prose-lg text-gray-700 space-y-4">.*?</div>\s*</div>\s*<div>\s*<h3',
+            new_about_html + '\n                </div>\n\n                <div>\n                    <h3',
+            content,
+            flags=re.DOTALL
+        )
+
+    # Translate Places to Visit list items
+    city_places = t.get('city_places', {})
+    places_list = city_places.get(city_slug, city_places.get('default', []))
+
+    if places_list:
+        # Build the new places list HTML
+        new_places_html = '<ul class="space-y-3 text-gray-700">\n'
+        for place in places_list:
+            new_places_html += f'                <li class="flex items-start gap-2"><span class="text-rose-600 mt-1">•</span><span>{place}</span></li>\n'
+        new_places_html += '                    </ul>'
+
+        # Replace the existing places list
+        content = re.sub(
+            r'<ul class="space-y-3 text-gray-700">.*?</ul>',
+            new_places_html,
+            content,
+            flags=re.DOTALL
+        )
+
+    # Translate "Explore Other Cities" section header
+    explore_title = t.get('explore_other_cities', {}).get('title', 'その他の都市を探す')
+    content = re.sub(
+        r'<h2 class="text-2xl font-bold text-gray-900 mb-6">Explore Other Cities</h2>',
+        f'<h2 class="text-2xl font-bold text-gray-900 mb-6">{explore_title}</h2>',
+        content
+    )
+
     # Translate footer section headers
     content = re.sub(r'<h4 class="text-white font-semibold mb-3">Popular Cities</h4>',
                      '<h4 class="text-white font-semibold mb-3">人気の都市</h4>', content)
