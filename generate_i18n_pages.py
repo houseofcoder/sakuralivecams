@@ -146,9 +146,64 @@ def translate_index_page(content, translations):
     content = re.sub(r'<h3 class="text-xl font-bold text-gray-900 mb-3">24/7 Live Coverage</h3>',
                      f'<h3 class="text-xl font-bold text-gray-900 mb-3">{t["why_watch"]["coverage"]["title"]}</h3>', content)
 
+    # Translate "Why Watch" section description paragraphs
+    content = re.sub(
+        r'Plan your Japan trip by checking real-time weather, crowd levels at popular attractions, and seasonal highlights like cherry blossoms or autumn foliage\. See exactly what to expect before you visit\.',
+        t['why_watch']['tourism']['description'],
+        content
+    )
+    content = re.sub(
+        r'Stay connected to Japan from anywhere in the world\. Watch daily life unfold at train stations, experience festivals in real-time, or simply enjoy the peaceful ambiance of Japanese temples and gardens\.',
+        t['why_watch']['cultural']['description'],
+        content
+    )
+    content = re.sub(
+        r"Never miss a moment with round-the-clock streaming from 200\+ cameras\. Watch sunrise over Mt Fuji, rush hour at Tokyo Station, or late-night neon lights in Osaka's Dotonbori district\.",
+        t['why_watch']['coverage']['description'],
+        content
+    )
+
     # Translate About section
     content = re.sub(r'<h2 class="text-2xl font-bold mb-3">About SakuraLive - Your Gateway to Japan</h2>',
                      f'<h2 class="text-2xl font-bold mb-3">{t["about"]["title"]}</h2>', content)
+
+    # Replace first About paragraph (with city links)
+    about_p1 = t['about']['description_1']
+    about_p1_cities = t['about'].get('description_1_cities', '')
+    new_p1 = f'''<p class="text-gray-700 leading-relaxed mb-4">
+                {about_p1}
+                {about_p1_cities}
+            </p>'''
+    content = re.sub(
+        r'<p class="text-gray-700 leading-relaxed mb-4">\s*SakuraLive is your premier destination.*?</p>',
+        new_p1,
+        content,
+        flags=re.DOTALL
+    )
+
+    # Replace second About paragraph (with landmark links)
+    about_p2_landmarks = t['about'].get('description_2_landmarks', '')
+    new_p2 = f'''<p class="text-gray-700 leading-relaxed mb-4">
+                {about_p2_landmarks}
+            </p>'''
+    content = re.sub(
+        r'<p class="text-gray-700 leading-relaxed mb-4">\s*Our cameras capture everything.*?</p>',
+        new_p2,
+        content,
+        flags=re.DOTALL
+    )
+
+    # Replace third About paragraph
+    about_p3 = t['about']['description_3']
+    new_p3 = f'''<p class="text-gray-700 leading-relaxed">
+                {about_p3}
+            </p>'''
+    content = re.sub(
+        r'<p class="text-gray-700 leading-relaxed">\s*Whether you\'re planning your first trip.*?</p>',
+        new_p3,
+        content,
+        flags=re.DOTALL
+    )
 
     # Translate FAQ section
     content = re.sub(r'<h3 class="text-xl font-semibold mb-3">Frequently Asked Questions</h3>',
