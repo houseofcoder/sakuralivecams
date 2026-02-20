@@ -48,17 +48,9 @@ def get_hreflang_tags(page_path, is_japanese=False):
 
 def get_language_switcher_html(current_lang, page_path):
     """Generate language switcher HTML."""
-    if current_lang == 'ja':
-        en_path = f'../{page_path}' if '/' in page_path else f'../{page_path}'
-        ja_path = page_path
-        # Adjust paths for nested directories
-        if page_path.startswith('cities/') or page_path.startswith('cameras/'):
-            en_path = f'../../{page_path}'
-        elif page_path == 'index.html':
-            en_path = '../index.html'
-    else:
-        en_path = page_path
-        ja_path = f'ja/{page_path}'
+    base_url = 'https://sakuralivecams.com'
+    en_path = f'{base_url}/{page_path}'
+    ja_path = f'{base_url}/ja/{page_path}'
 
     return f'''<div class="flex items-center gap-2 text-sm">
                     <a href="{en_path}" class="{'text-white font-semibold' if current_lang == 'en' else 'text-gray-400 hover:text-white'}">EN</a>
@@ -865,7 +857,7 @@ def process_utility_pages(translations):
         print(f"  ✅ Created {page_name}")
 
 def add_hreflang_to_english_pages():
-    """Add hreflang tags to all English pages."""
+    """Add hreflang tags and language switcher to all English pages."""
     print("\nAdding hreflang tags to English pages...")
 
     # Process index.html
@@ -875,11 +867,11 @@ def add_hreflang_to_english_pages():
 
     if 'hreflang="ja"' not in content:
         content = add_hreflang_to_content(content, 'index.html', is_japanese=False)
-        content = add_language_switcher(content, 'en', 'index.html')
+    content = add_language_switcher(content, 'en', 'index.html')
 
-        with open(index_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print("  ✅ Updated index.html")
+    with open(index_path, 'w', encoding='utf-8') as f:
+        f.write(content)
+    print("  ✅ Updated index.html")
 
     # Process city pages
     cities_dir = BASE_DIR / 'cities'
@@ -889,10 +881,10 @@ def add_hreflang_to_english_pages():
 
         if 'hreflang="ja"' not in content:
             content = add_hreflang_to_content(content, f'cities/{city_file.name}', is_japanese=False)
-            content = add_language_switcher(content, 'en', f'cities/{city_file.name}')
+        content = add_language_switcher(content, 'en', f'cities/{city_file.name}')
 
-            with open(city_file, 'w', encoding='utf-8') as f:
-                f.write(content)
+        with open(city_file, 'w', encoding='utf-8') as f:
+            f.write(content)
 
     print("  ✅ Updated city pages")
 
@@ -904,10 +896,10 @@ def add_hreflang_to_english_pages():
 
         if 'hreflang="ja"' not in content:
             content = add_hreflang_to_content(content, f'cameras/{camera_file.name}', is_japanese=False)
-            content = add_language_switcher(content, 'en', f'cameras/{camera_file.name}')
+        content = add_language_switcher(content, 'en', f'cameras/{camera_file.name}')
 
-            with open(camera_file, 'w', encoding='utf-8') as f:
-                f.write(content)
+        with open(camera_file, 'w', encoding='utf-8') as f:
+            f.write(content)
 
     print("  ✅ Updated camera pages")
 
@@ -920,10 +912,10 @@ def add_hreflang_to_english_pages():
 
             if 'hreflang="ja"' not in content:
                 content = add_hreflang_to_content(content, page_name, is_japanese=False)
-                content = add_language_switcher(content, 'en', page_name)
+            content = add_language_switcher(content, 'en', page_name)
 
-                with open(page_path, 'w', encoding='utf-8') as f:
-                    f.write(content)
+            with open(page_path, 'w', encoding='utf-8') as f:
+                f.write(content)
 
     print("  ✅ Updated utility pages")
 
