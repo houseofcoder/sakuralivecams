@@ -48,31 +48,9 @@ def get_hreflang_tags(page_path, is_japanese=False):
 
 def get_language_switcher_html(current_lang, page_path):
     """Generate language switcher HTML."""
-    # Check if page is in a nested directory (cities/ or cameras/)
-    is_nested = page_path.startswith('cities/') or page_path.startswith('cameras/')
-    filename = page_path.split('/')[-1] if is_nested else page_path
-
-    if current_lang == 'ja':
-        if is_nested:
-            # From /ja/cities/ or /ja/cameras/, go up two levels to reach English version
-            en_path = f'../../{page_path}'
-            # Stay in same directory - just use filename
-            ja_path = filename
-        elif page_path == 'index.html':
-            en_path = '../index.html'
-            ja_path = 'index.html'
-        else:
-            en_path = f'../{page_path}'
-            ja_path = page_path
-    else:
-        if is_nested:
-            # From /cities/ or /cameras/, stay in same directory for EN
-            en_path = filename
-            # Go up one level then into /ja/ for Japanese version
-            ja_path = f'../ja/{page_path}'
-        else:
-            en_path = page_path
-            ja_path = f'ja/{page_path}'
+    base_url = 'https://sakuralivecams.com'
+    en_path = f'{base_url}/{page_path}'
+    ja_path = f'{base_url}/ja/{page_path}'
 
     return f'''<div class="flex items-center gap-2 text-sm">
                     <a href="{en_path}" class="{'text-white font-semibold' if current_lang == 'en' else 'text-gray-400 hover:text-white'}">EN</a>
